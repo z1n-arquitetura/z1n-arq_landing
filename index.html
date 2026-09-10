@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Z1N Arquiteturas | Assessoria Especializada em Arquitetura</title>
+
+    <meta name="description" content="Z1N Arquiteturas — Assessoria Especializada em Arquitetura. Projetos residenciais, comerciais e institucionais, regularizações, demandas judiciais, acessibilidade e sustentabilidade.">
+
+    <meta property="og:title" content="Z1N Arquiteturas | Assessoria Especializada em Arquitetura">
+    <meta property="og:description" content="Projetos, regularizações e soluções especializadas para imóveis residenciais, comerciais e institucionais.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #102536;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =====================================================
+           CORES
+        ===================================================== */
+
+        :root {
+            --navy: #071b2b;
+            --navy-2: #0b2538;
+            --gold: #d89a32;
+            --gold-light: #f1b94e;
+            --white: #ffffff;
+            --light: #f4f4f1;
+            --text: #102536;
+            --muted: #64717b;
+            --border: rgba(255,255,255,.18);
+        }
+
+        /* =====================================================
+           CONTAINER
+        ===================================================== */
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 20;
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,.15);
+        }
+
+        .header-inner {
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-z1n {
+            font-family: "Montserrat", sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            letter-spacing: -3px;
+            line-height: .8;
+        }
+
+        .logo-name {
+            font-size: 11px;
+            letter-spacing: 5px;
+            margin-top: 7px;
+        }
+
+        .logo-slogan {
+            border-left: 1px solid rgba(255,255,255,.4);
+            padding-left: 20px;
+            font-size: 12px;
+            line-height: 1.4;
+            max-width: 150px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: 13px;
+        }
+
+        nav a {
+            transition: .2s;
+        }
+
+        nav a:hover {
+            color: var(--gold-light);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 23px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .25s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-gold {
+            background: var(--gold-light);
+            color: #111;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            background: #ffc965;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--gold);
+            color: white;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: #111;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 720px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(4,22,35,.98) 0%,
+                    rgba(4,22,35,.90) 35%,
+                    rgba(4,22,35,.35) 70%,
+                    rgba(4,22,35,.15) 100%
+                ),
+                url("images/hero.jpg") center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 570px;
+            padding-top: 70px;
+        }
+
+        .gold-line {
+            width: 36px;
+            height: 3px;
+            background: var(--gold-light);
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero p {
+            max-width: 500px;
+            font-size: 17px;
+            color: rgba(255,255,255,.88);
+            margin-bottom: 34px;
+        }
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+            padding: 90px 0;
+            background: var(--light);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.15;
+            color: var(--navy);
+            margin-bottom: 22px;
+        }
+
+        h2 span {
+            color: var(--gold);
+        }
+
+        .intro-text p {
+            color: #43515b;
+            font-size: 16px;
+            max-width: 570px;
+            margin-bottom: 25px;
+        }
+
+        .services-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--navy);
+        }
+
+        .services-inline span:not(:last-child)::after {
+            content: "•";
+            color: var(--gold);
+            margin-left: 20px;
+        }
+
+        .intro-image {
+            height: 390px;
+            border-radius: 3px;
+            overflow: hidden;
+            background:
+                linear-gradient(rgba(7,27,43,.15), rgba(7,27,43,.15)),
+                url("images/intro.jpg") center/cover no-repeat;
+        }
+
+        /* =====================================================
+           SERVIÇOS
+        ===================================================== */
+
+        .services {
+            background: var(--navy);
+            color: white;
+            padding: 90px 0;
+        }
+
+        .services h2 {
+            color: white;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 50px;
+            border-top: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+        }
+
+        .service-card {
+            padding: 35px 30px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            min-height: 230px;
+            transition: .25s;
+        }
+
+        .service-card:hover {
+            background: rgba(255,255,255,.04);
+        }
+
+        .service-icon {
+            width: 45px;
+            height: 45px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 19px;
+            margin-bottom: 22px;
+        }
+
+        .service-card h3 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: rgba(255,255,255,.68);
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        /* =====================================================
+           DIFERENCIAIS
+        ===================================================== */
+
+        .differentials {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .diff-items {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .diff-item {
+            padding: 0 25px;
+            border-left: 1px solid #ddd;
+        }
+
+        .diff-number {
+            font-family: "Montserrat", sans-serif;
+            font-size: 25px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .diff-item h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .diff-item p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           REGULARIZAÇÃO
+        ===================================================== */
+
+        .regularizacao {
+            background: var(--navy-2);
+            color: white;
+        }
+
+        .regularizacao-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 430px;
+        }
+
+        .regularizacao-image {
+            background:
+                linear-gradient(rgba(7,27,43,.05), rgba(7,27,43,.2)),
+                url("images/regularizacao.jpg") center/cover no-repeat;
+        }
+
+        .regularizacao-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 70px;
+        }
+
+        .regularizacao-content h2 {
+            color: white;
+        }
+
+        .regularizacao-content p {
+            color: rgba(255,255,255,.75);
+            max-width: 540px;
+            margin-bottom: 28px;
+        }
+
+        /* =====================================================
+           PROCESSO
+        ===================================================== */
+
+        .process {
+            padding: 85px 0;
+            background: var(--light);
+        }
+
+        .process-header {
+            max-width: 350px;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 3fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            position: relative;
+        }
+
+        .step-number {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .step h3 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            position: relative;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5,21,34,.96),
+                    rgba(5,21,34,.88)
+                ),
+                url("images/cta.jpg") center/cover no-repeat;
+            color: white;
+            padding: 70px 0;
+        }
+
+        .cta-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.75);
+            max-width: 580px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #061723;
+            color: white;
+            padding: 45px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid rgba(255,255,255,.15);
+        }
+
+        .footer-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer a {
+            color: rgba(255,255,255,.62);
+            font-size: 12px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: rgba(255,255,255,.35);
+            font-size: 10px;
+            padding-top: 22px;
+        }
+
+        /* =====================================================
+           WHATSAPP FIXO
+        ===================================================== */
+
+        .whatsapp-fixed {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 50;
+            background: #1ea85a;
+            color: white;
+            padding: 13px 18px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(0,0,0,.25);
+        }
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .container {
+                width: min(100% - 30px, 700px);
+            }
+
+            header {
+                position: absolute;
+            }
+
+            .header-inner {
+                height: 72px;
+            }
+
+            .logo-slogan,
+            nav a:not(.header-cta) {
+                display: none;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            .header-cta {
+                display: inline-flex !important;
+            }
+
+            .logo-z1n {
+                font-size: 34px;
+            }
+
+            .logo-name {
+                font-size: 9px;
+            }
+
+            .hero {
+                min-height: 680px;
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(4,22,35,.95),
+                        rgba(4,22,35,.72)
+                    ),
+                    url("images/hero.jpg") center/cover no-repeat;
+            }
+
+            .hero-content {
+                padding-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .intro-grid,
+            .regularizacao-grid,
+            .diff-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-image {
+                height: 300px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .diff-items {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+
+            .diff-item {
+                border-left: none;
+                border-top: 1px solid #ddd;
+                padding: 20px 0 0;
+            }
+
+            .regularizacao-image {
+                min-height: 300px;
+            }
+
+            .regularizacao-content {
+                padding: 55px 30px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .cta-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 560px) {
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                min-height: auto;
+            }
+
+            .diff-items {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-fixed {
+                right: 15px;
+                bottom: 15px;
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="container header-inner">
+
+        <a href="#" class="logo">
+
+            <div>
+                <div class="logo-z1n">Z1N</div>
+                <div class="logo-name">ARQUITETURAS</div>
+            </div>
+
+            <div class="logo-slogan">
+                Assessoria Especializada<br>
+                em Arquitetura
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="#projetos">Projetos</a>
+
+            <a href="#servicos">Soluções</a>
+
+            <a href="#sobre">Sobre</a>
+
+            <a href="#contato">Contato</a>
+
+            <a href="#contato" class="btn btn-gold header-cta">
+                Solicite uma consultoria
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="gold-line"></div>
+
+            <h1>
+                Transformamos ideias
+                em <span>espaços únicos.</span>
+            </h1>
+
+            <p>
+                Projetos, regularizações e soluções especializadas
+                para imóveis residenciais, comerciais e institucionais.
+            </p>
+
+            <a href="#contato" class="btn btn-gold">
+                Solicite uma consultoria
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro" id="sobre">
+
+    <div class="container intro-grid">
+
+        <div class="intro-text">
+
+            <div class="gold-line"></div>
+
+            <h2>
+                Arquitetura <span>além do projeto.</span>
+            </h2>
+
+            <p>
+                A Z1N Arquiteturas atua na concepção, desenvolvimento
+                e regularização de imóveis, oferecendo assessoria
+                especializada para transformar necessidades,
+                oportunidades e desafios em soluções arquitetônicas viáveis.
+            </p>
+
+            <div class="services-inline">
+
+                <span>Projetos</span>
+                <span>Regularizações</span>
+                <span>Demandas Judiciais</span>
+                <span>Acessibilidade</span>
+                <span>Sustentabilidade</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="intro-image"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVIÇOS
+===================================================== -->
+
+<section class="services" id="servicos">
+
+    <div class="container">
+
+        <div class="gold-line"></div>
+
+        <h2>
+            Soluções para diferentes necessidades
+        </h2>
+
+
+        <div class="service-grid">
+
+
+            <article class="service-card">
+
+                <div class="service-icon">⌂</div>
+
+                <h3>Projetos Residenciais</h3>
+
+                <p>
+                    Casas, apartamentos e condomínios com foco em
+                    conforto, funcionalidade, estética e valorização
+                    do imóvel.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">▥</div>
+
+                <h3>Projetos Comerciais</h3>
+
+                <p>
+                    Lojas, escritórios, estabelecimentos e espaços
+                    corporativos projetados para eficiência, operação
+                    e experiência do usuário.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">⌂</div>
+
+                <h3>Projetos Institucionais</h3>
+
+                <p>
+                    Escolas, unidades de saúde, equipamentos públicos
+                    e outros espaços institucionais.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">▤</div>
+
+                <h3>Regularizações</h3>
+
+                <p>
+                    Análise, desenvolvimento e acompanhamento de
+                    processos para regularização de imóveis e edificações.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">⚖</div>
+
+                <h3>Demandas Judiciais</h3>
+
+                <p>
+                    Assessoria técnica em questões relacionadas à
+                    arquitetura, edificações, perícias, manifestações
+                    e demandas judiciais.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">♿</div>
+
+                <h3>Acessibilidade</h3>
+
+                <p>
+                    Adequação de edificações e espaços às necessidades
+                    de acessibilidade, circulação e inclusão.
+                </p>
+
+            </article>
+
+
+            <article class="service-card">
+
+                <div class="service-icon">⌁</div>
+
+                <h3>Sustentabilidade</h3>
+
+                <p>
+                    Estratégias arquitetônicas para maior eficiência,
+                    melhor desempenho e uso responsável dos recursos.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DIFERENCIAIS
+===================================================== -->
+
+<section class="differentials" id="projetos">
+
+    <div class="container diff-grid">
+
+
+        <div>
+
+            <div class="gold-line"></div>
+
+            <h2>
+                Experiência que transforma
+                complexidade em <span>solução.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="diff-items">
+
+
+            <div class="diff-item">
+
+                <div class="diff-number">01</div>
+
+                <h3>Assessoria especializada</h3>
+
+                <p>
+                    Análise técnica individualizada para cada
+                    imóvel e necessidade.
+                </p>
+
+            </div>
+
+
+            <div class="diff-item">
+
+                <div class="diff-number">02</div>
+
+                <h3>Regularização</h3>
+
+                <p>
+                    Experiência na identificação de pendências
+                    e desenvolvimento das soluções necessárias.
+                </p>
+
+            </div>
+
+
+            <div class="diff-item">
+
+                <div class="diff-number">03</div>
+
+                <h3>Visão técnica</h3>
+
+                <p>
+                    Arquitetura associada à viabilidade,
+                    funcionalidade e valorização patrimonial.
+                </p>
+
+            </div>
+
+
+            <div class="diff-item">
+
+                <div class="diff-number">04</div>
+
+                <h3>Soluções complexas</h3>
+
+                <p>
+                    Atuação em regularizações, adequações,
+                    acessibilidade e demandas técnicas.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REGULARIZAÇÃO
+===================================================== -->
+
+<section class="regularizacao">
+
+    <div class="regularizacao-grid">
+
+
+        <div class="regularizacao-image"></div>
+
+
+        <div class="regularizacao-content">
+
+            <div class="gold-line"></div>
+
+            <h2>
+                Seu imóvel está <span>irregular?</span>
+            </h2>
+
+            <p>
+                Uma edificação irregular pode dificultar venda,
+                financiamento, inventário, desmembramento ou
+                adaptação para uma nova atividade.
+
+                A Z1N Arquiteturas analisa a situação do imóvel
+                e orienta o caminho necessário para sua regularização.
+            </p>
+
+            <div>
+
+                <a
+                    href="https://wa.me/5516991128533?text=Olá%2C%20gostaria%20de%20analisar%20a%20situação%20do%20meu%20imóvel."
+                    class="btn btn-gold"
+                    target="_blank"
+                >
+                    Analisar meu imóvel
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESSO
+===================================================== -->
+
+<section class="process">
+
+    <div class="container process-grid">
+
+
+        <div class="process-header">
+
+            <div class="gold-line"></div>
+
+            <h2>
+                Do problema
+                à <span>solução.</span>
+            </h2>
+
+            <p>
+                Um processo claro para transformar sua necessidade
+                em uma solução arquitetônica.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-number">01</div>
+
+                <h3>Análise</h3>
+
+                <p>
+                    Entendemos a situação do imóvel,
+                    suas necessidades e objetivos.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">02</div>
+
+                <h3>Diagnóstico</h3>
+
+                <p>
+                    Identificamos condições existentes,
+                    exigências e possíveis caminhos.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">03</div>
+
+                <h3>Solução</h3>
+
+                <p>
+                    Desenvolvemos o projeto, adequação
+                    ou documentação necessária.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">04</div>
+
+                <h3>Acompanhamento</h3>
+
+                <p>
+                    Orientamos o processo até a conclusão
+                    da demanda.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta" id="contato">
+
+    <div class="container cta-grid">
+
+
+        <div>
+
+            <h2>
+                Tem um projeto ou uma situação
+                que <span>precisa de solução?</span>
+            </h2>
+
+            <p>
+                Converse com a Z1N Arquiteturas e descubra
+                quais são os próximos passos para o seu imóvel.
+            </p>
+
+        </div>
+
+
+        <div class="cta-buttons">
+
+            <a href="#" class="btn btn-gold">
+                Agendar reunião
+            </a>
+
+            <a
+                href="https://wa.me/5516991128533?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consultoria%20com%20a%20Z1N%20Arquiteturas."
+                target="_blank"
+                class="btn btn-outline"
+            >
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <div class="logo">
+
+                    <div>
+                        <div class="logo-z1n">Z1N</div>
+                        <div class="logo-name">ARQUITETURAS</div>
+                    </div>
+
+                </div>
+
+                <br>
+
+                <p>
+                    Assessoria Especializada em Arquitetura.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Soluções
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="#servicos">Projetos Residenciais</a>
+                    <a href="#servicos">Projetos Comerciais</a>
+                    <a href="#servicos">Projetos Institucionais</a>
+                    <a href="#servicos">Regularizações</a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Especialidades
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="#servicos">Demandas Judiciais</a>
+                    <a href="#servicos">Acessibilidade</a>
+                    <a href="#servicos">Sustentabilidade</a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Contato
+                </div>
+
+                <div class="footer-links">
+
+                    <p>Ribeirão Preto e região</p>
+
+                    <a href="tel:+5516991128533">
+                        (16) 99112-8533
+                    </a>
+
+                    <a href="mailto:contato@z1n-arq.com.br">
+                        contato@z1n-arq.com.br
+                    </a>
+
+                    <a href="#">
+                        Instagram
+                    </a>
+
+                    <a href="#">
+                        Facebook
+                    </a>
+
+                    <a href="#">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            Z1N Arquiteturas · Todos os direitos reservados.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     WHATSAPP FIXO
+===================================================== -->
+
+<a
+    class="whatsapp-fixed"
+    href="https://wa.me/5516991128533?text=Olá%2C%20vim%20pelas%20redes%20sociais%20e%20gostaria%20de%20conhecer%20os%20serviços%20da%20Z1N%20Arquiteturas."
+    target="_blank"
+>
+    WhatsApp
+</a>
+
+
+</body>
+</html>
